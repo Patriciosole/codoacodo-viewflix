@@ -7,6 +7,17 @@ main > section,
 footer {
     border: 5px solid greenyellow;
 }
+header{
+    height: 50px;
+}
 main {
     display: flex;
+    height: calc(100vh - (50px + 50px) );
+}
+aside {
+    max-width: 350px;
+}
+
+footer{
+    height: 50px;
 }
