@@ -6,7 +6,7 @@ header,
 main > section,
 aside,
 footer {
-    border: 5px solid greenyellow;
+    border: 5px dashed greenyellow;
 }
 header{
     height: 50px;
@@ -21,7 +21,7 @@ main > section {
     flex:1;
 }
 aside {
-    max-width: 350px;
+    width: 450px;
 }
 
 footer{
