@@ -23,7 +23,7 @@ main {
 }
 main > section {
     flex:1;
-    min-width: 450px;
+    min-width: 50%;
 }
 aside {
     width: 450px;
