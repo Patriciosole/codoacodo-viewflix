@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body {
     background-color: black;
     color: white;
@@ -13,12 +16,14 @@ header{
 }
 main {
     display: flex;
+    flex-wrap: wrap;
     height: calc(100vh - (50px + 50px + 30px) );
     flex-direction: row;
     justify-content: space-between;
 }
 main > section {
     flex:1;
+    min-width: 450px;
 }
 aside {
     width: 450px;
