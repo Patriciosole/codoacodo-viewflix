@@ -1,0 +1,12 @@
+body {
+    background-color: black;
+    color: white;
+}
+header,
+main > section,
+footer {
+    border: 5px solid greenyellow;
+}
+main {
+    display: flex;
+}
