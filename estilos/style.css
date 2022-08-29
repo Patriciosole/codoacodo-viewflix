@@ -4,6 +4,7 @@ body {
 }
 header,
 main > section,
+aside,
 footer {
     border: 5px solid greenyellow;
 }
@@ -12,7 +13,12 @@ header{
 }
 main {
     display: flex;
-    height: calc(100vh - (50px + 50px) );
+    height: calc(100vh - (50px + 50px + 30px) );
+    flex-direction: row;
+    justify-content: space-between;
+}
+main > section {
+    flex:1;
 }
 aside {
     max-width: 350px;
