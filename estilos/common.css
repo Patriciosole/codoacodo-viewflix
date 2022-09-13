@@ -56,12 +56,16 @@ main::-webkit-scrollbar {
     min-width: 50%;
 }
 
+[class$="-container-fluid"] {
+    max-width: 1600px;
+    margin   : 0 auto;
+    padding  : 0;
+}
 [class$="-container"] {
     max-width: 1200px;
     margin   : 0 auto;
     padding  : 2rem;
 }
-
 .link {
     color          : currentColor;
     text-decoration: none;
