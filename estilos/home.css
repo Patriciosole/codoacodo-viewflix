@@ -1,0 +1,41 @@
+.catalogue-section {
+    margin-bottom: 1rem;
+}
+.catalogue-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 0;
+}
+.catalogue-content {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 2rem
+}
+
+.catalogue-content::-webkit-scrollbar {
+    width: .5rem;
+}
+.catalogue-item:not(:first-child) {
+    margin-left: 1.5rem;
+}
+
+.catalogue-image-link {
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    -webkit-transition: 1s linear;
+    transition: all .5s linear;
+}
+.catalogue-image {
+    max-width: 25rem;
+    -webkit-transition: 1s linear;
+    transition: all .8s linear;
+}
+
+.catalogue-item:hover .catalogue-image-link {
+    box-shadow: -1px 4px 7px 4px #ffffff2e;
+}
+.catalogue-item:hover .catalogue-image {
+    -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}

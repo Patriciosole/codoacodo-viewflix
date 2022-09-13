@@ -1,0 +1,24 @@
+.aside-estrenos {
+    width: 350px;
+    margin-left: 5rem;
+}
+.estreno {
+    margin: 1.5rem 0 2.5rem;
+}
+.estreno-title {
+    font-weight: bold;
+}
+.estreno-image {
+    margin: 1.5rem 0;
+}
+.estreno-duration {
+    margin-top: 1.5rem;
+}
+
+
+@media only screen and (max-width: 844px) {
+    .aside-estrenos {
+        width: 350px;
+        margin: 0 auto;
+    }
+}

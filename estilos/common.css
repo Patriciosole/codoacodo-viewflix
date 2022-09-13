@@ -1,0 +1,86 @@
+:root {
+    font-size: 10px;
+}
+
+body {
+    color           : #FFF;
+    font-size       : 1.6rem;
+    font-family     : 'Roboto', sans-serif;
+    background-color: #03030F;
+    background      : linear-gradient(212.24deg, #03030F 30.06%, rgb(62 81 98) 88.44%);
+}
+main {
+    overflow-y     : auto;
+}
+
+main::-webkit-scrollbar {
+    width: .5rem;
+}
+
+.main-container {
+    display        : flex;
+    flex-wrap      : wrap;
+    height         : calc(100vh - (var(--header-height) + var(--footer-height)));
+    flex-direction : row;
+    justify-content: space-between;
+}
+
+@media only screen and (min-width: 845px) {
+    .mobile-hidden {
+        display: block !important;
+    }
+
+    .mobile-show {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 844px) {
+    .main-container {
+        display  : block;
+        flex-wrap: wrap;
+        height   : auto;
+    }
+
+    .mobile-hidden {
+        display: none !important;
+    }
+
+    .mobile-show {
+        display: block !important;
+    }
+}
+
+.main-container>section {
+    flex     : 1;
+    min-width: 50%;
+}
+
+[class$="-container"] {
+    max-width: 1200px;
+    margin   : 0 auto;
+    padding  : 2rem;
+}
+
+.link {
+    color          : currentColor;
+    text-decoration: none;
+}
+
+::-moz-selection {
+    color     : #000;
+    background: #7992a9;
+}
+
+::selection {
+    color     : #000;
+    background: #7992a9;
+}
+
+/* FORMS */
+
+input[type=text] {
+    height       : 3.5rem;
+    border-radius: 4px;
+    border       : 0;
+}
