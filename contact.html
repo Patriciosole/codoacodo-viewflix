@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header class="header-main">
@@ -31,64 +34,44 @@
     </header>
     <main>
         <div class="main-container">
-            <section>
+            <section class="contact-section">
                 <div class="contact-banner">
                 </div>
-                <h2>Escribinos</h2>
-                <div class="page-descripcion">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                    <p>Sed sed facilisi non pretium pellentesque. Lacus, diam fermentum iaculis scelerisque nascetur eget.</p>
+                <div class="contact-text">
+                    <h2 class="title">Escribinos</h2>
+                    <div class="page-descripcion">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        <p>Sed sed facilisi non pretium pellentesque. Lacus, diam fermentum iaculis scelerisque nascetur eget.</p>
+                    </div>
+                    <form action="" onsubmit="return(validateForm());" name="contactForm" method="post">
+                        <div>
+                            <label for="nombre">Nombre</label>
+                            <input name="nombre" id="nombre" type="text" required>
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input name="email" id="email" type="text" required pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}$" />
+                        </div>
+                        <div>
+                            <label for="">Mensaje</label>
+                            <textarea name="mensaje" id="mensaje" cols="30" rows="10" required></textarea>
+                        </div>
+                        <div>
+                            <input type="submit" value="Enviar" class="btn btn-ghost">
+                        </div>
+                        <div class="success-message">Su mensaje fue enviado</div>
+                    </form>
                 </div>
-                <form action="">
-                    <div>
-                        <label for=""></label>
-                        <input type="text">
-                    </div>
-                    <div>
-                        <label for=""></label>
-                        <input type="text">
-                    </div>
-                    <div>
-                        <label for=""></label>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </div>
-                    <div>
-                        <input type="submit" value="Enviar">
-                    </div>
-                </form>
-                form
+
             </section>
             <aside class="aside-estrenos">
-                <header>
-                    <h2>Estrenos Recomendados</h2>
-                </header>
-                <article class="estreno">
-                    <p class="estreno-title"><a href="detail.html" class="link">Titulo del estreno</a></p>
-                    <a href="detail.html" class="link"><img src="images/movie image.png" alt="[movie title]" class="estreno-image"></a>
-                    <p><a href="detail.html" class="link">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></p>
-                    <p class="estreno-duration">157 min</p>
-                </article>
-
-                <article class="estreno">
-                    <p class="estreno-title">Titulo del estreno</p>
-                    <img src="images/movie image.png" alt="[movie title]" class="estreno-image">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p class="estreno-duration">157 min</p>
-                </article>
-
-                <article class="estreno">
-                    <p class="estreno-title">Titulo del estreno</p>
-                    <img src="images/movie image.png" alt="[movie title]" class="estreno-image">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p class="estreno-duration">157 min</p>
-                </article>
             </aside>
         </div>
     </main>
     <footer class="footer-main">
         <div class="footer-container">
             <a href="https://patriciosole.github.io/codoacodo-viewflix/"><img src="images/VF_logo.svg" alt="Viewflix logo" class="footer-logo"></a>
-            <div class="menu-footer">© 2022 - Viewflix Copyright | <a href="contact.html" class="link">Contacto</a> | link a social media?</div>
+            <div class="menu-footer">© 2022 - Viewflix Copyright | <a href="contact.html" class="link">Contacto</a> | <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a><a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a><a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a></div>
         </div>
     </footer>
 
@@ -96,5 +79,8 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
 
+    <script>
+        getAside();
+    </script>
 </body>
 </html>

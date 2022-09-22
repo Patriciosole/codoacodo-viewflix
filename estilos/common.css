@@ -51,6 +51,7 @@ main::-webkit-scrollbar {
     }
 }
 
+
 .main-container>section {
     flex     : 1;
     min-width: 50%;
@@ -66,10 +67,6 @@ main::-webkit-scrollbar {
     margin   : 0 auto;
     padding  : 2rem;
 }
-.link {
-    color          : currentColor;
-    text-decoration: none;
-}
 
 ::-moz-selection {
     color     : #000;
@@ -82,9 +79,60 @@ main::-webkit-scrollbar {
 }
 
 /* FORMS */
-
-input[type=text] {
-    height       : 3.5rem;
+label {
+    color: #FFFFFF;
+    display: block;;
+}
+input[type=text],
+textarea {
+    min-height       : 3.5rem;
     border-radius: 4px;
-    border       : 0;
+    border       : 1px solid #FFFFFF;
+    background-color: transparent;
+    color: #FFFFFF;
+    margin-bottom: 2.5rem;
+    width: 100%;
+    padding: .5rem 2rem;
+}
+textarea{
+    resize: none;
+}
+.success-message{
+    display: none;
+    color: green;
+    margin-top: 2.5rem;
+}
+.success-message--active{
+    display: block;
+}
+/* Texts*/
+.title {
+    font-size: 4rem;
+    font-weight: normal;;
+}
+p{
+    margin-bottom: 2rem;
+}
+
+/* Buttons and links */
+
+.link {
+    color          : currentColor;
+    text-decoration: none;
+}
+
+.btn {
+    min-width: 11.5rem;
+    min-height: 4rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 2;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn.btn-ghost {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 0.5rem;
 }

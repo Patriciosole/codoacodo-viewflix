@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +11,18 @@
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <header class="header-main">
         <div class="mobile-menu-content header-container">
-            <a href="https://patriciosole.github.io/codoacodo-viewflix/"><img src="images/VF_logo.svg" alt="Viewflix logo" class="header-logo"></a>
+            <a href="https://patriciosole.github.io/codoacodo-viewflix/"><img src="images/VF_logo.svg"
+                    alt="Viewflix logo" class="header-logo"></a>
             <span class="mobile-btn mobile-show"></span>
             <div class="menu-main">
                 <a href="category.html" class="link menu-main-item">Mis Favoritos</a>
@@ -23,57 +30,70 @@
                 <a href="category.html" class="link menu-main-item">Series</a>
                 <a href="category.html" class="link menu-main-item">Social</a>
                 <span class="current-user mobile-hidden menu-main-item">PC</span>
-                <a href="#" class="mobile-hidden menu-main-item" title="En algún momento funcionará para buscar"><img src="images/mglass.svg" alt="" class="icon-search" /></a>
+                <a href="#" class="mobile-hidden menu-main-item" title="En algún momento funcionará para buscar"><img
+                        src="images/mglass.svg" alt="" class="icon-search" /></a>
                 <a href="category.html" class="link menu-main-item mobile-show">My Account</a>
-                <label for="search" class="link menu-main-item mobile-show">Search: <input type="text" name="search" id="search" disabled></label>
+                <label for="search" class="link menu-main-item mobile-show">Search: <input type="text" name="search"
+                        id="search" disabled></label>
             </div>
         </div>
     </header>
     <main>
         <div class="main-container">
             <section>
+                <div class="movie-detail-container">
+                    <div>
+                        <h2 class="movie-detail__title"></h2>
+                        <img src="/images/netflix_logo.svg" alt="" class="movie-detail__network">
+                        <div class="movie-detail__specifics"></div>
+                        <div class="movie-detail__genres"></div>
+                        <p class="movie-detail__description"></p>
+                        <p class="movie-detail__casting"></p>
+                        <a href="#" class="btn btn-ghost">Reproducir</a> <a href="#"><i class="fa-regular fa-heart"></i></a>
+                    </div>
+                    <div>
+                        <img src="" alt="" class="movie-detail__image">
+                    </div>
+                </div>
+                <section class="catalogue-section">
 
-               [ COLOCAR INFO AQUI ]
+                    <header class="catalogue-header">
+                        <img src="images/netflix_logo.svg" alt="Netflix">
+                        <a href="category.html" class="link">Ver más</a>
+                    </header>
+                    <div class="catalogue-content catalogue-content--similares scroll">
+                    </div>
+
+                </section>
 
 
             </section>
             <aside class="aside-estrenos">
-                <header>
-                    <h2>Estrenos Recomendados</h2>
-                </header>
-                <article class="estreno">
-                    <p class="estreno-title"><a href="detail.html" class="link">Titulo del estreno</a></p>
-                    <a href="detail.html" class="link"><img src="images/movie image.png" alt="[movie title]" class="estreno-image"></a>
-                    <p><a href="detail.html" class="link">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></p>
-                    <p class="estreno-duration">157 min</p>
-                </article>
 
-                <article class="estreno">
-                    <p class="estreno-title">Titulo del estreno</p>
-                    <img src="images/movie image.png" alt="[movie title]" class="estreno-image">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p class="estreno-duration">157 min</p>
-                </article>
-
-                <article class="estreno">
-                    <p class="estreno-title">Titulo del estreno</p>
-                    <img src="images/movie image.png" alt="[movie title]" class="estreno-image">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p class="estreno-duration">157 min</p>
-                </article>
             </aside>
         </div>
     </main>
     <footer class="footer-main">
         <div class="footer-container">
             <a href="https://patriciosole.github.io/codoacodo-viewflix/"><img src="images/VF_logo.svg" alt="Viewflix logo" class="footer-logo"></a>
-            <div class="menu-footer">© 2022 - Viewflix Copyright | <a href="contact.html" class="link">Contacto</a> | link a social media?</div>
+            <div class="menu-footer">© 2022 - Viewflix Copyright | <a href="contact.html" class="link">Contacto</a> | <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a><a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a><a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a></div>
         </div>
     </footer>
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
 
+    <!-- Scrollbar plugin -->
+    <script src="js/niceScroll.js"></script>
+
+    <script>
+        getAside();
+        getEstrenos();
+        getMovieDetail();
+        getScroll();
+    </script>
 </body>
+
 </html>

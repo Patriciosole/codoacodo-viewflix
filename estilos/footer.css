@@ -12,7 +12,10 @@
 .footer-logo{
     max-width: 11rem;
 }
-
+.footer-main a{
+    color: #FFFFFF;
+    margin: 0 1rem;
+}
 
 @media only screen and (max-width: 844px) {
     .footer-main{

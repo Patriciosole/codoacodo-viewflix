@@ -1,0 +1,7 @@
+.movie-detail-container{
+    display: flex;
+}
+.movie-detail__image{
+    min-width: 30rem;
+    margin-left: 3rem;
+}
