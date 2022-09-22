@@ -149,9 +149,9 @@ function getMovieDetail(){
     requestMovie.onload = () => {
         if (requestMovie.status === 200) {
             let movies = JSON.parse(requestMovie.response);
-            console.log(movies);
+            let movieTitle = movies.original_title || movies.name;
             let genreItem = "";
-            document.getElementsByClassName("movie-detail__title")[0].innerHTML  = movies.original_title;
+            document.getElementsByClassName("movie-detail__title")[0].innerHTML  = movieTitle;
             if(movieMode) {
                 let date = new Date(movies.release_date).toLocaleDateString('es-AR');
                 document.getElementsByClassName("movie-detail__specifics")[0].innerHTML  = '<span>' + date + '</span> <span>HD</span>';
