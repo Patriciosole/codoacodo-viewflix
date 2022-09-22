@@ -8,7 +8,15 @@ body {
     font-family     : 'Roboto', sans-serif;
     background-color: #03030F;
     background      : linear-gradient(212.24deg, #03030F 30.06%, rgb(62 81 98) 88.44%);
+    overflow-y: hidden;
 }
+
+@media only screen and (max-width: 844px) {
+    body {
+        overflow-y: unset;
+    }
+}
+
 main {
     overflow-y     : auto;
 }
