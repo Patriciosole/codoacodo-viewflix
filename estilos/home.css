@@ -24,12 +24,12 @@
     margin-bottom: 1.5rem;
     display: inline-block;
     -webkit-transition: 1s linear;
-    transition: all .5s linear;
+    transition: all 1s linear;
 }
 .catalogue-image {
     max-width: 25rem;
     -webkit-transition: 1s linear;
-    transition: all .8s linear;
+    transition: all 1s linear;
 }
 
 .catalogue-item:hover .catalogue-image-link {

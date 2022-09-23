@@ -284,3 +284,11 @@ function validateForm() {
     document.contactForm.mensaje.value = "";
     return false;
  }
+
+ // HEART BUTTON
+ var heartBtn = document.getElementsByClassName('fa-heart')[0];
+
+ //heartBtn.style.cursor = 'pointer';
+ heartBtn.onclick = function() {
+    heartBtn.classList.toggle('fa-solid');
+};
