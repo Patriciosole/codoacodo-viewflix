@@ -277,6 +277,8 @@ function validateForm() {
        document.contactForm.mensaje.focus() ;
        return false;
     }
+    return( true );
+}
     //return( true );
     // document.getElementsByClassName("success-message")[0].classList.add('success-message--active');
     // document.contactForm.nombre.value = "";
@@ -315,7 +317,7 @@ function validateForm() {
       });
     }
     form.addEventListener("submit", handleSubmit)
- }
+ //}
 
  // HEART BUTTON
  var heartBtn = document.getElementsByClassName('fa-heart')[0];
