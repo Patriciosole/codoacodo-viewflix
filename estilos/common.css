@@ -113,6 +113,11 @@ textarea{
 .success-message--active{
     display: block;
 }
+.success-message--error{
+    color: red;
+    display: block;
+}
+
 /* Texts*/
 .title {
     font-size: 4rem;
