@@ -282,7 +282,7 @@ function validateForm() {
     document.contactForm.nombre.value = "";
     document.contactForm.email.value = "";
     document.contactForm.mensaje.value = "";
-    return false;
+    return true;
  }
 
  // HEART BUTTON
