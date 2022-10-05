@@ -35,7 +35,7 @@ function getEstrenos() {
                     '</article>';
             }
             container.innerHTML = estrenoArticle;
-            //getScroll();
+            getScroll();
         } else {
             console.error('error ${request.status} ${request.statusText}');
         }
@@ -63,7 +63,7 @@ function getNetflix() {
                     '</div>';
             }
             container.innerHTML = netflixItem;
-            //getScroll();
+            getScroll();
         } else {
             console.error('error ${requestnetflix.status} ${requestnetflix.statusText}');
         }
@@ -91,7 +91,7 @@ function getHulu() {
                     '</div>';
             }
             container.innerHTML = huluItem;
-            //getScroll();
+            getScroll();
         } else {
             console.error('error ${requestHulu.status} ${requestHulu.statusText}');
         }
@@ -119,7 +119,7 @@ function getHBO() {
                     '</div>';
             }
             container.innerHTML = hboItem;
-            //getScroll();
+            getScroll();
         } else {
             console.error('error ${requestHBO.status} ${requestHBO.statusText}');
         }
@@ -223,7 +223,7 @@ function getMovieDetail() {
                             '</div>';
                     }
                     container.innerHTML = similarItem;
-                    //getScroll();
+                    getScroll();
                 } else {
                     console.error('error ${requestsimilar.status} ${requestsimilar.statusText}');
                 }
@@ -237,16 +237,14 @@ function getMovieDetail() {
 
 
 //  Nice Scroll init
-// function getScroll() {
-//     $(".scroll").niceScroll({
-//         cursorcolor: "#ffffff", // change cursor color in hex
-//         cursorborder: "1px solid #fff", // css definition for cursor border
-//         cursoropacitymax: .5,
-//         autohidemode: true,
-//         zindex:99,
-//         touchbehavior:true
-//     });
-// };
+function getScroll() {
+    $(".scroll").niceScroll({
+        cursorcolor: "#ffffff", // change cursor color in hex
+        cursorborder: "1px solid #fff", // css definition for cursor border
+        cursoropacitymax: .5,
+        autohidemode: true,
+    });
+};
 
 
 // Validate FORM in case HTML5 doesnt work
@@ -282,7 +280,6 @@ function validateForm() {
     }
     return (true);
 }
-
 
 // SEND MESSAGE
 var form = document.getElementById("contact-form");
