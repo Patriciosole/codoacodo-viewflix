@@ -243,6 +243,8 @@ function getScroll() {
         cursorborder: "1px solid #fff", // css definition for cursor border
         cursoropacitymax: .5,
         autohidemode: true,
+        zindex:99,
+        touchbehavior:true
     });
 };
 
