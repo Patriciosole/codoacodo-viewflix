@@ -283,6 +283,7 @@ function validateForm() {
     return (true);
 }
 
+
 // SEND MESSAGE
 var form = document.getElementById("contact-form");
 
