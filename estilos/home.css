@@ -12,7 +12,9 @@
     padding-bottom: 2rem
 }
 
-.catk
+.catalogue-content::-webkit-scrollbar {
+    width: .5rem;
+}
 .catalogue-item:not(:first-child) {
     margin-left: 1.5rem;
 }
