@@ -35,6 +35,7 @@ function getEstrenos() {
                     '</article>';
             }
             container.innerHTML = estrenoArticle;
+            getScroll();
         } else {
             console.error('error ${request.status} ${request.statusText}');
         }
@@ -62,7 +63,7 @@ function getNetflix() {
                     '</div>';
             }
             container.innerHTML = netflixItem;
-            $(".scroll").getNiceScroll().resize();
+            getScroll();
         } else {
             console.error('error ${requestnetflix.status} ${requestnetflix.statusText}');
         }
@@ -90,7 +91,7 @@ function getHulu() {
                     '</div>';
             }
             container.innerHTML = huluItem;
-            $(".scroll").getNiceScroll().resize();
+            getScroll();
         } else {
             console.error('error ${requestHulu.status} ${requestHulu.statusText}');
         }
@@ -118,7 +119,7 @@ function getHBO() {
                     '</div>';
             }
             container.innerHTML = hboItem;
-            $(".scroll").getNiceScroll().resize();
+            getScroll();
         } else {
             console.error('error ${requestHBO.status} ${requestHBO.statusText}');
         }
@@ -222,7 +223,7 @@ function getMovieDetail() {
                             '</div>';
                     }
                     container.innerHTML = similarItem;
-                    $(".scroll").getNiceScroll().resize();
+                    getScroll();
                 } else {
                     console.error('error ${requestsimilar.status} ${requestsimilar.statusText}');
                 }
