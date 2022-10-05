@@ -312,7 +312,9 @@ async function handleSubmit(event) {
         status.innerHTML = "Oops! There was a problem submitting your form"
     });
 }
-form.addEventListener("submit", handleSubmit);
+if (form){
+    form.addEventListener("submit", handleSubmit);
+}
 
 // HEART BUTTON
 var heartBtn = document.getElementsByClassName('fa-heart')[0];
