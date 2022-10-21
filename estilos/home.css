@@ -12,9 +12,6 @@
     padding-bottom: 2rem
 }
 
-.catalogue-content::-webkit-scrollbar {
-    width: .5rem;
-}
 .catalogue-item:not(:first-child) {
     margin-left: 1.5rem;
 }
@@ -38,4 +35,11 @@
 .catalogue-item:hover .catalogue-image {
     -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+
+@media only screen and (min-width: 768px) {
+    .catalogue-content::-webkit-scrollbar {
+        width: .5rem;
+    }
 }

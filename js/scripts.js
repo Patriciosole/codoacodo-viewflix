@@ -277,12 +277,14 @@ function getCategory() {
 
 //  Nice Scroll init
 function getScroll() {
-    $(".scroll").niceScroll({
-        cursorcolor: "#ffffff", // change cursor color in hex
-        cursorborder: "1px solid #fff", // css definition for cursor border
-        cursoropacitymax: .5,
-        autohidemode: true,
-    });
+    if($(window).width() >= 768){
+        $(".scroll").niceScroll({
+            cursorcolor: "#ffffff", // change cursor color in hex
+            cursorborder: "1px solid #fff", // css definition for cursor border
+            cursoropacitymax: .5,
+            autohidemode: true,
+        });
+    }
 };
 
 
