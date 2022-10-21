@@ -35,7 +35,8 @@ function getEstrenos() {
                     '</article>';
             }
             container.innerHTML = estrenoArticle;
-            getScroll();
+
+            setTimeout(() => getScroll(), 1000);
         } else {
             console.error('error ${request.status} ${request.statusText}');
         }
@@ -63,7 +64,7 @@ function getNetflix() {
                     '</div>';
             }
             container.innerHTML = netflixItem;
-            getScroll();
+            setTimeout(() => getScroll(), 1000);
         } else {
             console.error('error ${requestnetflix.status} ${requestnetflix.statusText}');
         }
@@ -91,7 +92,7 @@ function getHulu() {
                     '</div>';
             }
             container.innerHTML = huluItem;
-            getScroll();
+            setTimeout(() => getScroll(), 1000);
         } else {
             console.error('error ${requestHulu.status} ${requestHulu.statusText}');
         }
@@ -119,7 +120,7 @@ function getHBO() {
                     '</div>';
             }
             container.innerHTML = hboItem;
-            getScroll();
+            setTimeout(() => getScroll(), 1000);
         } else {
             console.error('error ${requestHBO.status} ${requestHBO.statusText}');
         }
@@ -223,7 +224,8 @@ function getMovieDetail() {
                             '</div>';
                     }
                     container.innerHTML = similarItem;
-                    getScroll();
+                    setTimeout(() => getScroll(), 1000);
+
                 } else {
                     console.error('error ${requestsimilar.status} ${requestsimilar.statusText}');
                 }
@@ -235,6 +237,43 @@ function getMovieDetail() {
     };
 }
 
+
+function getCategory() {
+
+    let promise = new Promise(function(resolve, reject) {
+
+        let requestcategory = new XMLHttpRequest();
+        requestcategory.open("GET", "https://api.themoviedb.org/4/list/8218196?page=1&api_key=" + apiToken) + '&include_adult=false';
+        requestcategory.send();
+        requestcategory.onload = () => {
+            if (requestcategory.status === 200) {
+                let container = document.querySelector('.catalogue-content--category');
+                let categoryItem = "";
+                let categoryItems = JSON.parse(requestcategory.response);
+                for (let i = 0; i < categoryItems.results.length; i++) {
+                    let resObj = categoryItems.results[i];
+                    let movieTitle = resObj.title || resObj.name;
+                    categoryItem += '<div class="catalogue-item">' +
+                        '<a href="detail.html?movID=' + resObj.id + '" class="catalogue-image-link">' +
+                        '<img src="https://image.tmdb.org/t/p/w500/' + resObj.poster_path + '" alt="' + movieTitle + '" class="catalogue-image" />' +
+                        '</a>' +
+                        '<p><a href="detail.html" class="link">' + movieTitle + '</a></p>' +
+                        '</div>';
+                }
+                resolve(container.innerHTML = categoryItem);
+            } else {
+                reject( console.error(`error ${requestcategory.status} ${requestcategory.statusText}`));
+            }
+        }
+      });
+
+      promise.then(function(response) {
+            response;
+        }, function(errorMessage) {
+            errorMessage;
+        }
+      );
+}
 
 //  Nice Scroll init
 function getScroll() {

@@ -34,34 +34,18 @@
         <div class="main-container">
             <section>
 
-               [ COLOCAR INFO AQUI ]
+                <section class="catalogue-section">
+                    <header class="catalogue-header">
+                        <img src="images/netflix_logo.svg" alt="Netflix">
+                    </header>
+                    <div class="catalogue-content catalogue-content--category">
+                    </div>
+
+                </section>
 
 
             </section>
             <aside class="aside-estrenos">
-                <header>
-                    <h2>Estrenos Recomendados</h2>
-                </header>
-                <article class="estreno">
-                    <p class="estreno-title"><a href="detail.html" class="link">Titulo del estreno</a></p>
-                    <a href="detail.html" class="link"><img src="images/movie image.png" alt="[movie title]" class="estreno-image"></a>
-                    <p><a href="detail.html" class="link">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></p>
-                    <p class="estreno-duration">157 min</p>
-                </article>
-
-                <article class="estreno">
-                    <p class="estreno-title">Titulo del estreno</p>
-                    <img src="images/movie image.png" alt="[movie title]" class="estreno-image">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p class="estreno-duration">157 min</p>
-                </article>
-
-                <article class="estreno">
-                    <p class="estreno-title">Titulo del estreno</p>
-                    <img src="images/movie image.png" alt="[movie title]" class="estreno-image">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p class="estreno-duration">157 min</p>
-                </article>
             </aside>
         </div>
     </main>
@@ -76,5 +60,13 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
 
+    <!-- Scrollbar plugin -->
+    <script src="js/niceScroll.js"></script>
+
+
+    <script>
+        getAside();
+        getCategory();
+    </script>
 </body>
 </html>

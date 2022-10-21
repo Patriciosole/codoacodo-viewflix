@@ -1,0 +1,12 @@
+.catalogue-content--category{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+}
+.catalogue-content--category .catalogue-image{
+    max-width: 100%;
+}
+.catalogue-content--category .catalogue-item:not(:first-child) {
+    margin: 0;
+}
