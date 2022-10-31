@@ -31,16 +31,30 @@
         </div>
     </header>
     <main>
-        <div class="main-container-fluid">
+        <div class="main-container">
             <section>
-                <div class="button-back"><button onclick="history.back()" class="btn btn-ghost">Regresar</button></div>
-                <div class="videoWrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jKZZO2SABFo?rel=0&hd=1" title="Movie" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+
+                <section class="catalogue-section">
+                    <header class="catalogue-header">
+                        <h2>Películas favoritas</h2>
+                    </header>
+                    <div class="catalogue-content catalogue-content--category">
+                    </div>
+
+                </section>
+
 
             </section>
+            <aside class="aside-estrenos">
+            </aside>
         </div>
     </main>
+    <footer class="footer-main">
+        <div class="footer-container">
+            <a href="https://patriciosole.github.io/codoacodo-viewflix/"><img src="images/VF_logo.svg" alt="Viewflix logo" class="footer-logo"></a>
+            <div class="menu-footer">© 2022 - Viewflix Copyright | <a href="contact.html" class="link">Contacto</a> | <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a><a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a><a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a></div>
+        </div>
+    </footer>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -49,5 +63,10 @@
     <!-- Scrollbar plugin -->
     <script src="js/niceScroll.js"></script>
 
+
+    <script>
+        getAside();
+        getCategoryFavs();
+    </script>
 </body>
 </html>

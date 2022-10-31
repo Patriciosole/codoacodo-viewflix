@@ -237,8 +237,8 @@ function getMovieDetail() {
     };
 }
 
-
-function getCategory() {
+// Get Cat Pelis
+function getCategoryPelis() {
 
     let promise = new Promise(function(resolve, reject) {
 
@@ -275,6 +275,82 @@ function getCategory() {
       );
 }
 
+
+// GET favs
+function getCategoryFavs() {
+    let promise = new Promise(function(resolve, reject) {
+
+        let requestcategory = new XMLHttpRequest();
+        requestcategory.open("GET", "https://api.themoviedb.org/3/trending/all/day?api_key=" + apiToken) + '&include_adult=false';
+        requestcategory.send();
+        requestcategory.onload = () => {
+            if (requestcategory.status === 200) {
+                let container = document.querySelector('.catalogue-content--category');
+                let categoryItem = "";
+                let categoryItems = JSON.parse(requestcategory.response);
+                for (let i = 0; i < categoryItems.results.length; i++) {
+                    let resObj = categoryItems.results[i];
+                    let movieTitle = resObj.title || resObj.name;
+                    categoryItem += '<div class="catalogue-item">' +
+                        '<a href="detail.html?movID=' + resObj.id + '" class="catalogue-image-link">' +
+                        '<img src="https://image.tmdb.org/t/p/w500/' + resObj.poster_path + '" alt="' + movieTitle + '" class="catalogue-image" />' +
+                        '</a>' +
+                        '<p><a href="detail.html" class="link">' + movieTitle + '</a></p>' +
+                        '</div>';
+                }
+                resolve(container.innerHTML = categoryItem);
+            } else {
+                reject( console.error(`error ${requestcategory.status} ${requestcategory.statusText}`));
+            }
+        }
+      });
+
+      promise.then(function(response) {
+            response;
+        }, function(errorMessage) {
+            errorMessage;
+        }
+      );
+}
+
+//Get Series
+
+function getCategorySeries() {
+
+    let promise = new Promise(function(resolve, reject) {
+
+        let requestcategory = new XMLHttpRequest();
+        requestcategory.open("GET", "https://api.themoviedb.org/4/list/8218197?page=1&api_key=" + apiToken) + '&include_adult=false';
+        requestcategory.send();
+        requestcategory.onload = () => {
+            if (requestcategory.status === 200) {
+                let container = document.querySelector('.catalogue-content--category');
+                let categoryItem = "";
+                let categoryItems = JSON.parse(requestcategory.response);
+                for (let i = 0; i < categoryItems.results.length; i++) {
+                    let resObj = categoryItems.results[i];
+                    let movieTitle = resObj.title || resObj.name;
+                    categoryItem += '<div class="catalogue-item">' +
+                        '<a href="detail.html?movID=' + resObj.id + '" class="catalogue-image-link">' +
+                        '<img src="https://image.tmdb.org/t/p/w500/' + resObj.poster_path + '" alt="' + movieTitle + '" class="catalogue-image" />' +
+                        '</a>' +
+                        '<p><a href="detail.html" class="link">' + movieTitle + '</a></p>' +
+                        '</div>';
+                }
+                resolve(container.innerHTML = categoryItem);
+            } else {
+                reject( console.error(`error ${requestcategory.status} ${requestcategory.statusText}`));
+            }
+        }
+      });
+
+      promise.then(function(response) {
+            response;
+        }, function(errorMessage) {
+            errorMessage;
+        }
+      );
+}
 //  Nice Scroll init
 function getScroll() {
     if($(window).width() >= 768){

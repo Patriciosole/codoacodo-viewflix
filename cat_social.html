@@ -12,9 +12,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header class="header-main">
@@ -35,34 +32,29 @@
     </header>
     <main>
         <div class="main-container">
-            <section class="contact-section">
-                <div class="contact-banner">
-                </div>
-                <div class="contact-text">
-                    <h2 class="title">Escribinos</h2>
-                    <div class="page-descripcion">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                        <p>Sed sed facilisi non pretium pellentesque. Lacus, diam fermentum iaculis scelerisque nascetur eget.</p>
-                    </div>
-                    <form action="https://formspree.io/f/xpzndgeg" onsubmit="return(validateForm());" name="contactForm" method="post" id="contact-form">
-                        <div>
-                            <label for="nombre">Nombre</label>
-                            <input name="nombre" id="nombre" type="text" required>
+            <section>
+
+                <section class="catalogue-section">
+                    <header class="catalogue-header">
+                        <h2>Social</h2>
+                    </header>
+                    <div class="catalogue-content catalogue-content--category scroll">
+                            <div class="catalogue-item">
+                                <a href="https://www.tiktok.com/@itscinema" class="catalogue-image-link"><img src="/images/social/1.png" alt="" class="catalogue-image" /></a>
+                                <p><a href="https://www.tiktok.com/@itscinema" class="link" target="_blank">@itscinema</a></p>
+                            </div>
+                            <div class="catalogue-item">
+                                <a href="https://www.tiktok.com/@itscinema" class="catalogue-image-link"><img src="/images/social/2.png" alt="" class="catalogue-image" /></a>
+                                <p><a href="https://www.tiktok.com/@itscinema" class="link" target="_blank">@itscinema</a></p>
+                            </div>
+                            <div class="catalogue-item">
+                                <a href="https://www.tiktok.com/@itscinema" class="catalogue-image-link"><img src="/images/social/3.png" alt="" class="catalogue-image" /></a>
+                                <p><a href="https://www.tiktok.com/@itscinema" class="link" target="_blank">@itscinema</a></p>
+                            </div>
                         </div>
-                        <div>
-                            <label for="email">Email</label>
-                            <input name="email" id="email" type="text" required pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}$" />
-                        </div>
-                        <div>
-                            <label for="">Mensaje</label>
-                            <textarea name="mensaje" id="mensaje" cols="30" rows="10" required></textarea>
-                        </div>
-                        <div>
-                            <button class="btn btn-ghost">Enviar</button>
-                        </div>
-                        <div class="success-message">Su mensaje fue enviado</div>
-                    </form>
-                </div>
+
+                </section>
+
 
             </section>
             <aside class="aside-estrenos">
@@ -82,6 +74,7 @@
 
     <!-- Scrollbar plugin -->
     <script src="js/niceScroll.js"></script>
+
 
     <script>
         getAside();
